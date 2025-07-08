@@ -17,24 +17,18 @@
             transition: background 0.3s, box-shadow 0.3s;
             box-shadow: 0 2px 16px 0 rgba(37,99,235,0.08);
         }
-        .navbar.scrolled {
-            background: linear-gradient(90deg, #2563eb 0%, #64748b 100%);
-            box-shadow: 0 4px 24px 0 rgba(37,99,235,0.18);
-        }
-        .navbar.scrolled .nav-link { color: #fff; }
-        .navbar.scrolled .nav-link:hover, .navbar.scrolled .nav-link:focus { color: #facc15; }
-        .nav-link {
-            color: #2563eb;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            padding: 0.5rem 1.25rem;
-            border-radius: 0.75rem;
-            position: relative;
-            background: transparent;
-            transition: color 0.2s, background 0.2s, box-shadow 0.2s, transform 0.2s;
-            outline: none;
-            display: inline-block;
-        }
+     /* --- Fix for Navbar Text Visibility on Scroll Only --- */
+.navbar.scrolled {
+    background: #fff !important;
+    box-shadow: 0 4px 24px 0 rgba(37,99,235,0.18);
+}
+.navbar.scrolled .nav-link {
+    color: #2563eb !important;
+}
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link:focus {
+    color: #facc15 !important;
+}
         .nav-link:after {
             content: "";
             display: block;
