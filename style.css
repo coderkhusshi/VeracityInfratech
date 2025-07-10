@@ -292,3 +292,49 @@
             color: #2563eb;
             font-weight: bold;
         }
+        /* Responsive grid for 10 cards, always symmetric */
+#services .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+@media (min-width: 640px) {
+    #services .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px) {
+    #services .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1280px) {
+    #services .grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+.service-card {
+    min-height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    background: linear-gradient(135deg, #fff 80%, #fef9c3 100%);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px 0 rgba(37,99,235,0.12), 0 1.5px 6px 0 rgba(251,191,36,0.10);
+    border-top-color: #2563eb;
+}
+.service-card img {
+    box-shadow: 0 2px 8px 0 rgba(37,99,235,0.10);
+}
+.service-card h3 {
+    min-height: 48px;
+}
+@media (max-width: 640px) {
+    .service-card {
+        min-height: 0;
+        padding: 1.25rem;
+    }
+}
